@@ -1,0 +1,477 @@
+/*
+ * Hoja de Estilos para Montana Vinos & Parrilla
+ * Tema: Elegante, Oscuro con Detalles Dorados (Final)
+ */
+
+/* ===== CONFIGURACIÓN GLOBAL (VARIABLES Y RESETEO) ===== */
+:root {
+    /* Paleta de Colores */
+    --color-oro: #D4AF37; 
+    --color-fondo-oscuro: #1a1a1a; 
+    --color-fondo-negro: #000000; 
+    --color-texto-principal: #f4f4f4; 
+    --color-texto-secundario: #aaaaaa; 
+
+    /* Tipografía */
+    --font-titulos: 'Playfair Display', serif; 
+    --font-cuerpo: 'Montserrat', sans-serif; 
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-oro); 
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+a {
+    color: var(--color-oro);
+    text-decoration: none;
+}
+
+/* ===== BARRA DE NAVEGACIÓN (DINÁMICA) ===== */
+
+
+.navbar {
+    background-color: var(--color-fondo-negro);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.4s ease, padding 0.4s ease; 
+}
+
+
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 70px; 
+    transition: height 0.4s ease; 
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav li {
+    margin-left: 1.5rem;
+}
+
+.navbar nav a {
+    color: var(--color-texto-principal);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--color-oro);
+}
+
+
+/* Estado 'Scrolled' de la barra de navegación (se activa con JavaScript) */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95); 
+    padding: 0.5rem 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.scrolled .logo img {
+    height: 50px; 
+}
+
+/* ===== BOTONES (Call to Action - CTA) ===== */
+.cta-button {
+    background-color: var(--color-oro);
+    color: var(--color-fondo-negro); /* IMPORTANTE: Texto negro sobre fondo dorado */
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.5);
+    /* Aseguramos que el botón no sea transparente ni invisible */
+    border: none; 
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--color-texto-principal);
+    color: var(--color-fondo-negro);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4); 
+}
+
+/* Botón con borde (outline) */
+.cta-button-outline {
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro);
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button-outline:hover {
+    background-color: var(--color-oro);
+    color: var(--color-fondo-negro);
+}
+
+
+/* ===== SECCIÓN HERO (INICIO) ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; 
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517248135807-679e5933a5c3');*/
+    /* 🚨 ESTA ES LA LÍNEA QUE DEBES MODIFICAR */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/FotoBar.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed; 
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #ffffff; 
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 2rem;
+}
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.content-section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+#galeria {
+    padding: 8rem 0; 
+    background-color: var(--color-fondo-negro);
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.content-section .container {
+    max-width: 800px; 
+}
+
+.bg-dark {
+    background-color: var(--color-fondo-negro);
+}
+/* ... y el resto de tu CSS ... */
+
+
+
+
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.content-section .container {
+    max-width: 800px; 
+}
+
+.bg-dark {
+    background-color: var(--color-fondo-negro);
+}
+
+/* ===== SECCIÓN MENÚ DETALLADO ===== */
+.menu-category-title {
+    font-family: var(--font-cuerpo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-texto-principal); 
+    text-align: left;
+    max-width: 800px;
+    margin: 3rem auto 1.5rem; 
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-oro); 
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 0.5rem; 
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px; 
+}
+
+.menu-item {
+    background: none; 
+    padding: 1.2rem 0; 
+    border-left: none; 
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1); 
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item h4 { 
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    color: var(--color-oro);
+    margin-bottom: 0.2rem;
+}
+
+.menu-item-detail {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    margin-bottom: 0;
+    color: var(--color-texto-secundario);
+    font-style: italic;
+}
+
+.menu-item-detail .price {
+    font-weight: 700;
+    color: var(--color-oro); 
+    font-style: normal;
+}
+
+/* ===== ESTILOS PARA LA SECCIÓN GALERÍA (CARRUSEL) AÑADIDOS AL FINAL DE style.css ===== */
+
+/* Contenedor del Carrusel */
+.slideshow-container {
+  max-width: 1000px; /* Limita el ancho del carrusel */
+  position: relative;
+  margin: auto;
+  border: 3px solid var(--color-oro); /* Borde elegante */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+/* Contenedor de cada slide */
+.mySlides {
+  display: none; /* Por defecto, todas las diapositivas están ocultas */
+}
+
+/* Estilo de la imagen dentro del carrusel */
+.slideshow-container img {
+  width: 100%;
+  height: 330px; /* 🔑 CLAVE: Altura Fija para que todas se vean iguales */
+  object-fit: cover; /* Recorta la imagen para cubrir el espacio sin distorsión */
+  vertical-align: middle;
+}
+
+/* Puntos indicadores (dots) */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--color-oro); /* Dorado para el punto activo o al pasar el ratón */
+}
+
+/* Animación de transición (Fade) */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* ===== ESTILOS PARA EL FORMULARIO DE RESERVAS ===== */
+.reservation-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: left;
+    padding: 2rem;
+    background-color: var(--color-fondo-oscuro);
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-oro); 
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: var(--color-fondo-negro);
+    color: var(--color-texto-principal);
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    border-color: var(--color-oro); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.form-control.full-width {
+    grid-column: 1 / -1; 
+}
+
+/* Estilo del botón de envío: Usa la clase .cta-button para los colores */
+.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.small-note {
+    font-size: 0.8rem;
+    color: var(--color-texto-secundario);
+    margin-top: 2rem;
+}
+
+/* ESTILO PARA VALIDACIÓN DE ERRORES (JavaScript) */
+.input-error {
+    border-color: #ff4d4d !important; 
+    box-shadow: 0 0 5px #ff4d4d;
+}
+
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background-color: var(--color-fondo-negro);
+    color: var(--color-texto-secundario);
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid #333;
+}
+
+.social-links a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-texto-principal);
+}
+
+
+/* ===== RESPONSIVE (MÓVIL) ===== */
+@media (max-width: 768px) {
+    
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content-section {
+        padding: 4rem 0;
+    }
+    
+    .form-group-grid {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+}
+
+/* ===== ESTILOS PARA LA SECCIÓN DE CONTACTO Y MAPA ===== */
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px; /* Le damos un poco más de ancho al mapa */
+    margin: 2rem auto 0;
+    overflow: hidden;
+    border: 3px solid var(--color-oro); /* Borde dorado alrededor del mapa */
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.map-container iframe {
+    /* El iframe se autoajusta gracias al width="100%" y height="450" definidos en el HTML */
+    display: block;
+}
