@@ -12,22 +12,27 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <a href="#inicio" class="logo">
-                <img src="img/logo.png" alt="Logo Montana Vinos & Parrilla"> 
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#menu">Menú</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#reservas" class="cta-button">Reservar Mesa</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar"> 
+            
+            <div class="navbar-header">
+                <a href="#inicio" class="logo">
+                    <img src="img/logo.png" alt="Logo Montana Vinos & Parrilla">
+                </a>
+                
+                <button class="hamburger-menu" aria-label="Abrir menú de navegación">
+                    ☰ </button>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Nuestra Historia</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Visítanos</a></li>
+                <li><a href="#reservas" class="cta-button">Reservar</a></li> 
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -91,7 +96,7 @@
                     </div>
 
                 </div>
-                 <a href="#reservas" class="cta-button-outline reveal-bottom">Reservar Mesa Ahora</a>
+                   <a href="#reservas" class="cta-button-outline reveal-bottom">Reservar Mesa Ahora</a>
             </div>
         </section>
 
@@ -139,6 +144,7 @@
                     <div class="mySlides fade">
                       <img src="img/PlatosMontana/Plato12.png" alt="Plato 12 de Montana">
                     </div>
+                    
                     
 
                     <div style="text-align:center; margin-top: 1rem;">
@@ -247,7 +253,7 @@
                 title="Ubicación de Montana Vinos & Parrilla"
             ></iframe>
         </div>
-     </div>
+      </div>
 
 
 <footer>
@@ -257,7 +263,7 @@
                 <a href="https://tiktok.com/@montanavinosyparrilla" target="_blank">TikTok</a>
                 <a href="https://wa.me/573112534783" target="_blank">WhatsApp Business</a>
             </div>
-            <p>&copy; 2025 Montana Vinos & Parrilla SAS. Todos los derechos reservados.</p>
+            <p>© 2025 Montana Vinos & Parrilla SAS. Todos los derechos reservados.</p>
             <p>Web: www.montanavinosyparrilla.com</p>
         </div>
     </footer>
@@ -302,7 +308,7 @@
     </script>
 
 
-<script>
+    <script>
         let slideIndex = 0; // Índice inicial
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -353,8 +359,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('reservationForm');
             const submitBtn = document.getElementById('submitButton');
-            // 🚨 Reemplaza con tu número real, incluyendo código de país (Ej: '573101234567').
-            const WHATSAPP_NUMBER = '3112534783'; 
+            // Reemplaza con tu número real, incluyendo código de país (Ej: '573101234567').
+            const WHATSAPP_NUMBER = '573112534783'; 
             
             
             const getFormData = () => {
@@ -383,9 +389,7 @@
                 const formData = getFormData();
 
                 if (formData) {
-                    // 1. CONSTRUCCIÓN del cuerpo del mensaje usando \n (salto de línea de JavaScript)
-                    // NOTA: Usamos \n. La función encodeURIComponent se encargará de convertirlo a %0A
-                    // para la URL, lo cual es la forma correcta. Eliminamos los emojis por si acaso.
+                    // CONSTRUCCIÓN del cuerpo del mensaje usando \n (salto de línea de JavaScript)
                     const messageBody = 
                         `¡Hola, Montana Vinos & Parrilla!\n\n` + 
                         `Tengo una solicitud de RESERVA:\n` +
@@ -399,13 +403,13 @@
                         `Peticiones: ${formData.message}\n\n` +
                         `¡Espero su confirmación!`;
 
-                    // 2. CODIFICACIÓN: Se aplica SÓLO una vez para convertir \n a %0A
+                    // CODIFICACIÓN: Se aplica SÓLO una vez para convertir \n a %0A
                     const encodedMessage = encodeURIComponent(messageBody);
 
-                    // 3. CONSTRUCCIÓN FINAL del enlace de WhatsApp
+                    // CONSTRUCCIÓN FINAL del enlace de WhatsApp
                     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
-                    // 4. Redirigir al usuario
+                    // Redirigir al usuario
                     window.open(whatsappURL, '_blank');
                     
                     form.reset(); 
@@ -416,5 +420,28 @@
             });
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Función para alternar la clase 'active'
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Función para cerrar el menú al hacer clic en un enlace (en móvil)
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

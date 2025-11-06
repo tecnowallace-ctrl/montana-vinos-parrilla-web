@@ -1,6 +1,6 @@
 /*
  * Hoja de Estilos para Montana Vinos & Parrilla
- * Tema: Elegante, Oscuro con Detalles Dorados (Final)
+ * Tema: Elegante, Oscuro con Detalles Dorados (FINAL AJUSTADO)
  */
 
 /* ===== CONFIGURACIÓN GLOBAL (VARIABLES Y RESETEO) ===== */
@@ -60,7 +60,7 @@ a {
 
 /* ===== BARRA DE NAVEGACIÓN (DINÁMICA) ===== */
 
-
+/* Estilos para PC (Desktop) */
 .navbar {
     background-color: var(--color-fondo-negro);
     padding: 1rem 0;
@@ -70,14 +70,20 @@ a {
     z-index: 1000;
     border-bottom: 1px solid #333;
     transition: background-color 0.4s ease, padding 0.4s ease; 
-}
-
-
-
-.navbar .container {
+    
+    /* Configuración principal de la barra (para PC) */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navbar .navbar-header {
+    /* Ocultamos este div en PC, no es necesario */
+    display: flex;
+    align-items: center;
+    /* En PC, el logo y los links van separados */
 }
 
 .navbar .logo img {
@@ -85,23 +91,25 @@ a {
     transition: height 0.4s ease; 
 }
 
-.navbar nav ul {
+.nav-links {
     list-style: none;
-    display: flex;
+    display: flex; /* En PC se muestran en línea */
     align-items: center;
 }
 
-.navbar nav li {
+.nav-links li {
     margin-left: 1.5rem;
 }
 
-.navbar nav a {
+.nav-links li a {
     color: var(--color-texto-principal);
     font-weight: 400;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    padding: 0.5rem 0; /* Ajuste para hover */
 }
 
-.navbar nav a:hover {
+.nav-links li a:hover {
     color: var(--color-oro);
 }
 
@@ -109,7 +117,7 @@ a {
 /* Estado 'Scrolled' de la barra de navegación (se activa con JavaScript) */
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.95); 
-    padding: 0.5rem 0; 
+    padding: 0.5rem 5%; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -120,13 +128,12 @@ a {
 /* ===== BOTONES (Call to Action - CTA) ===== */
 .cta-button {
     background-color: var(--color-oro);
-    color: var(--color-fondo-negro); /* IMPORTANTE: Texto negro sobre fondo dorado */
+    color: var(--color-fondo-negro); 
     padding: 0.75rem 1.25rem;
     border-radius: 5px;
     font-weight: 700;
     transition: all 0.3s ease;
     box-shadow: 0 0 0 rgba(212, 175, 55, 0.5);
-    /* Aseguramos que el botón no sea transparente ni invisible */
     border: none; 
     cursor: pointer;
 }
@@ -163,8 +170,6 @@ a {
     justify-content: center;
     text-align: center;
     padding-top: 80px; 
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517248135807-679e5933a5c3');*/
-    /* 🚨 ESTA ES LA LÍNEA QUE DEBES MODIFICAR */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/FotoBar.jpeg');
     background-size: cover;
     background-position: center top;
@@ -192,24 +197,6 @@ a {
     padding: 8rem 0; 
     background-color: var(--color-fondo-negro);
 }
-
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.content-section .container {
-    max-width: 800px; 
-}
-
-.bg-dark {
-    background-color: var(--color-fondo-negro);
-}
-/* ... y el resto de tu CSS ... */
-
-
-
-
 
 .content-section h2 {
     font-size: 2.5rem;
@@ -277,56 +264,56 @@ a {
     font-style: normal;
 }
 
-/* ===== ESTILOS PARA LA SECCIÓN GALERÍA (CARRUSEL) AÑADIDOS AL FINAL DE style.css ===== */
+/* ===== ESTILOS PARA LA SECCIÓN GALERÍA (CARRUSEL) ===== */
 
 /* Contenedor del Carrusel */
 .slideshow-container {
-  max-width: 1000px; /* Limita el ancho del carrusel */
-  position: relative;
-  margin: auto;
-  border: 3px solid var(--color-oro); /* Borde elegante */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+    max-width: 1000px; 
+    position: relative;
+    margin: auto;
+    border: 3px solid var(--color-oro); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 /* Contenedor de cada slide */
 .mySlides {
-  display: none; /* Por defecto, todas las diapositivas están ocultas */
+    display: none; 
 }
 
 /* Estilo de la imagen dentro del carrusel */
 .slideshow-container img {
-  width: 100%;
-  height: 330px; /* 🔑 CLAVE: Altura Fija para que todas se vean iguales */
-  object-fit: cover; /* Recorta la imagen para cubrir el espacio sin distorsión */
-  vertical-align: middle;
+    width: 100%;
+    height: 330px; 
+    object-fit: cover; 
+    vertical-align: middle;
 }
 
 /* Puntos indicadores (dots) */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #555;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: var(--color-oro); /* Dorado para el punto activo o al pasar el ratón */
+    background-color: var(--color-oro); 
 }
 
 /* Animación de transición (Fade) */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 
@@ -386,7 +373,7 @@ a {
     grid-column: 1 / -1; 
 }
 
-/* Estilo del botón de envío: Usa la clase .cta-button para los colores */
+/* Estilo del botón de envío */
 .submit-button {
     width: 100%;
     margin-top: 1rem;
@@ -407,7 +394,27 @@ a {
 }
 
 
-/* ===== PIE DE PÁGINA ===== */
+/* ===== PIE DE PÁGINA Y CONTACTO ===== */
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px; 
+    margin: 2rem auto 0;
+    overflow: hidden;
+    border: 3px solid var(--color-oro); 
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.map-container iframe {
+    display: block;
+}
+
 footer {
     background-color: var(--color-fondo-negro);
     color: var(--color-texto-secundario);
@@ -427,18 +434,90 @@ footer {
 }
 
 
-/* ===== RESPONSIVE (MÓVIL) ===== */
-@media (max-width: 768px) {
+/* ===== MENÚ HAMBURGUESA (MÓVIL) ===== */
+
+/* Estilo del botón hamburguesa */
+.hamburger-menu {
+    display: none; /* Por defecto, oculto en PC */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-texto-principal); /* Cambiado de --color-blanco */
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; 
+}
+
+/* REGLAS PARA PANTALLAS PEQUEÑAS (MÓVILES) */
+@media (max-width: 900px) {
+    /* 🚨 1. CONFIGURACIÓN DEL NAVBAR EN MÓVIL */
+    .navbar {
+        /* Desactiva el justify-content: space-between original */
+        justify-content: flex-start; 
+        padding-left: 0; 
+        padding-right: 0;
+        display: block; /* Permite que el header ocupe todo el ancho sin flex */
+    }
     
-    .navbar .container {
-        flex-direction: column;
+    /* 🚨 2. CONTENEDOR DE LOGO Y BOTÓN */
+    .navbar-header {
+        display: flex;
+        justify-content: space-between; /* Mueve el logo a un lado y el botón al otro */
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem 5%; /* Añade el padding aquí, no en el .navbar */
+    }
+    
+    /* 🚨 3. CENTRAR EL LOGO EN MÓVIL */
+    .navbar-header .logo {
+        flex-grow: 1; /* Permite que el logo ocupe el espacio restante */
+        text-align: center; /* Centra el contenido (el logo) */
+        padding-right: 2rem; /* Deja un espacio a la derecha para que el logo se centre mejor, compensando el ancho del botón */
     }
 
-    .navbar nav ul {
-        flex-direction: column;
-        width: 100%;
+    /* Mostrar el botón hamburguesa en la derecha */
+    .hamburger-menu {
+        display: block; 
     }
     
+    /* 🚨 4. ESTILOS DEL MENÚ DESPLEGADO (NAV LINKS) */
+    .nav-links {
+        display: none; /* Se ocultarán por defecto */
+        flex-direction: column; 
+        width: 100%;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.98); 
+        border-top: 1px solid var(--color-oro);
+        height: 0; 
+        overflow: hidden; 
+        transition: height 0.3s ease-in-out; 
+    }
+
+    /* 5. Mostrar el menú cuando tiene la clase 'active' */
+    .nav-links.active {
+        display: flex; 
+        height: auto; 
+        padding-bottom: 1rem;
+    }
+
+    /* 🚨 6. JUSTIFICAR ENLACES A LA IZQUIERDA */
+    .nav-links li {
+        margin: 0;
+        text-align: left; /* Justificación a la izquierda */
+        width: 100%;
+        padding: 0.3rem 5%; /* Añade padding para separación y alineación */
+    }
+    
+    /* Pequeño ajuste para el botón 'Reservar' en el menú desplegado */
+    .nav-links li .cta-button {
+        display: inline-block;
+        width: auto;
+        margin-top: 0.5rem;
+    }
+    
+    /* Ajustes generales para el resto del sitio en móvil */
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -451,27 +530,4 @@ footer {
         grid-template-columns: 1fr; 
         gap: 1rem;
     }
-}
-
-/* ===== ESTILOS PARA LA SECCIÓN DE CONTACTO Y MAPA ===== */
-
-.contact-info {
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-    text-align: center;
-}
-
-.map-container {
-    width: 100%;
-    max-width: 1000px; /* Le damos un poco más de ancho al mapa */
-    margin: 2rem auto 0;
-    overflow: hidden;
-    border: 3px solid var(--color-oro); /* Borde dorado alrededor del mapa */
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.map-container iframe {
-    /* El iframe se autoajusta gracias al width="100%" y height="450" definidos en el HTML */
-    display: block;
 }
