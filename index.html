@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "name": "Montana Vinos & Parrilla SAS",
+  "image": "http://www.montanavinosyparrilla.com/img/logo.png", 
+  "url": "http://www.montanavinosyparrilla.com/", 
+  "telephone": "+573112534783",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 9#22-17, San Andresito San José",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "postalCode": "111611",
+    "addressCountry": "CO"
+  },
+  "servesCuisine": "Parrilla, Carnes Premium, Vinos",
+  "priceRange": "350000 - 60000", 
+  "hasMap": "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4318.705080744742!2d-74.09302862465839!3d4.605293195369369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f997cc5b8ad07%3A0x1a8624e126396bd!2sMontana%20Vinos%20%26%20Parrilla!5e1!3m2!1ses-419!2sco!4v1763522093255!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>",
+  "acceptsReservations": "True",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "19:00"
+    }
+  ]
+}
+</script>
+
+    <title>Montana V&P</title>
+    <link rel="icon" type="image/png" href="img/logo2.png">
+
+    <meta name="description" content="Montana Vinos & Parrilla: Santuario de fuego, carne premium y vino. Vive una experiencia inmersiva en nuestra cabaña de alta montaña en Bogotá. Reserva tu mesa hoy.">
+    <meta name="keywords" content="Restaurante Bogotá, Parrilla San Andresito, Vinos y Carnes Premium, Reserva Mesa Bogotá, Montana Parrilla">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montana Vinos & Parrilla - Restaurante Gourmet</title>
+    
     <link rel="stylesheet" href="style.css"> 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -26,7 +65,7 @@
             
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Nuestra Historia</a></li>
+                <li><a href="#historia">Nuestra Historia</a></li>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Visítanos</a></li>
@@ -38,76 +77,72 @@
     <main>
 
         <section id="inicio" class="hero">
-            <div class="hero-content reveal-bottom"> 
-                <h1>SABORES QUE CUENTAN HISTORIAS</h1>
-                <p>Alta cocina, vinos selectos y pasión por la parrilla.</p>
-                <a href="#menu" class="cta-button">Ver el Menú</a>
-            </div>
+            
+            <div class="hero-content container">
+    <h1>Montana Vinos & Parrilla</h1>
+    <p>Donde el **tiempo se detiene**, el alma se calma y los **sentidos despiertan**.</p>
+    <a href="#reservas" class="cta-button-outline">Hacer una Reserva</a>
+</div>
         </section>
 
-        <section id="nosotros" class="content-section">
-            <div class="container reveal-bottom"> 
-                <h2>NUESTRA FILOSOFÍA</h2>
-                <p>En Montana Vinos & Parrilla, cada plato es una obra de arte. Nos dedicamos a la excelencia culinaria, seleccionando solo los mejores cortes de carne y los vinos más exquisitos. Nuestra pasión es crear una experiencia gourmet inolvidable, donde el fuego de la parrilla se encuentra con la elegancia del buen vino.</p>
-            </div>
-        </section>
+
+        <section id="historia" class="content-section">
+    <div class="container">
+        <h2>🔥 La Mística de Montana</h2>
+        <p>En las montañas, donde la naturaleza impone respeto y el **fuego se convierte en arte**, nació la inspiración de Montana Vinos & Parrilla. No somos solo un restaurante, somos una experiencia sensorial que rinde tributo al espíritu libre del oeste y a la fuerza de la tierra.</p>
+        <p>Nuestro concepto es un **santurario del fuego, la carne y el vino**. Aquí, cada corte, cada vino y cada detalle evocan la nobleza del trabajo artesanal y el placer de la buena compañía. Al cruzar nuestras puertas, te adentras en un universo rústico y elegante, transportado a una cabaña de alta montaña en pleno corazón urbano.</p>
+    </div>
+       </section>
+
 
         <section id="menu" class="content-section bg-dark">
-            <div class="container reveal-bottom">
-                <h2>UN MENÚ EXCEPCIONAL</h2>
-                <p>Descubre nuestras especialidades de la parrilla, entradas sofisticadas y una cava de vinos curada para el paladar más exigente.</p>
-                
-                <div class="menu-categories">
+            <div class="container">
+    <h2>🥩 Nuestro Menú</h2>
+    <p class="menu-intro">La parrilla es el corazón de Montana. Nuestros **cortes premium** se preparan con precisión y respeto, resaltando su pureza y sabor original. Cada plato es una **obra de fuego, vino y carácter**.</p>
+    
+    <div class="slideshow-container menu-slideshow">
 
-                    <h3 class="menu-category-title">ENTRADAS GOURMET</h3>
-                    <div class="menu-grid">
-                        <div class="menu-item"> 
-                            <h4>Tartar de Atún</h4>
-                            <p class="menu-item-detail">Aguacate, sésamo tostado y vinagreta cítrica. <span class="price">$18</span></p>
-                        </div>
-                        <div class="menu-item"> 
-                            <h4>Carpaccio de Res Wagyu</h4>
-                            <p class="menu-item-detail">Rúcula fresca, láminas de parmesano y aceite de trufa. <span class="price">$22</span></p>
-                        </div>
-                    </div>
+        <div class="myMenuSlides fade">
+            <img src="img/Entradas.png" alt="Menú de Cortes de Res y Parrilla" class="menu-image">
+            <div class="menu-caption">Menú de Cortes y Parrilla</div>
+        </div>
 
-                    <h3 class="menu-category-title">ESPECIALIDADES DE LA PARRILLA</h3>
-                    <div class="menu-grid">
-                        <div class="menu-item"> 
-                            <h4>Corte Tomahawk (800g)</h4>
-                            <p class="menu-item-detail">Madurado por 45 días, servido con mantequilla de romero y patatas bravas. <span class="price">$65</span></p>
-                        </div>
-                        <div class="menu-item"> 
-                            <h4>Lomo de Cordero Patagónico</h4>
-                            <p class="menu-item-detail">Reducción de Malbec y puré rústico de apio nabo. <span class="price">$48</span></p>
-                        </div>
-                    </div>
+        <div class="myMenuSlides fade">
+            <img src="img/Fuerte1.png" alt="Carta de Vinos y Bebidas" class="menu-image">
+            <div class="menu-caption">Carta de Vinos y Bebidas</div>
+        </div>
 
-                    <h3 class="menu-category-title">VINOS DE LA BODEGA MONTANA</h3>
-                    <div class="menu-grid">
-                        <div class="menu-item"> 
-                            <h4>Malbec Gran Reserva '20</h4>
-                            <p class="menu-item-detail">Valle de Uco, Mendoza. Notas a frutos negros y especias. <span class="price">$90</span></p>
-                        </div>
-                        <div class="menu-item"> 
-                            <h4>Chardonnay Crianza</h4>
-                            <p class="menu-item-detail">D.O. Valle de Casablanca. Elegante, con toques de vainilla. <span class="price">$75</span></p>
-                        </div>
-                    </div>
+        <div class="myMenuSlides fade">
+            <img src="img/Vinos.png" alt="Menú de Entradas y Postres" class="menu-image">
+            <div class="menu-caption">Entradas y Postres</div>
+        </div>
+        
+        <div class="myMenuSlides fade">
+            <img src="img/Varios.png" alt="Ofertas Especiales del Chef" class="menu-image">
+            <div class="menu-caption">Ofertas Especiales del Chef</div>
+        </div>
 
-                </div>
-                   <a href="#reservas" class="cta-button-outline reveal-bottom">Reservar Mesa Ahora</a>
-            </div>
+        <a class="prev menu-arrow" onclick="plusMenuSlides(-1)">❮</a>
+        <a class="next menu-arrow" onclick="plusMenuSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot menu-dot" onclick="currentMenuSlide(1)"></span> 
+        <span class="dot menu-dot" onclick="currentMenuSlide(2)"></span> 
+        <span class="dot menu-dot" onclick="currentMenuSlide(3)"></span> 
+        <span class="dot menu-dot" onclick="currentMenuSlide(4)"></span>
+    </div>
+</div>
         </section>
 
         
-
-<section id="galeria" class="content-section bg-dark">
+        <section id="galeria" class="content-section bg-dark">
             <div class="container reveal-bottom">
                 <h2>EXPERIENCIA MONTANA</h2>
                 
                 <div class="slideshow-container">
-
                     <div class="mySlides fade">
                       <img src="img/PlatosMontana/FotoPlato.jpeg" alt="Plato 1 de Montana">
                     </div>
@@ -145,8 +180,9 @@
                       <img src="img/PlatosMontana/Plato12.png" alt="Plato 12 de Montana">
                     </div>
                     
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     
-
                     <div style="text-align:center; margin-top: 1rem;">
                       <span class="dot" onclick="currentSlide(1)"></span>
                       <span class="dot" onclick="currentSlide(2)"></span>
@@ -165,7 +201,6 @@
                 </div>
             </div>
         </section>
-
 
         <section id="reservas" class="content-section bg-dark">
             <div class="container reveal-bottom">
@@ -196,252 +231,127 @@
                         </div>
                         
                         <div class="form-control">
-                            <label for="date">Fecha</label>
-                            <input type="date" id="date" name="date" required>
+                        <label for="date">Fecha</label>
+                        <input type="date" id="date" name="date" required>
                         </div>
 
                         <div class="form-control">
-                            <label for="time">Hora</label>
-                            <input type="time" id="time" name="time" min="18:00" max="22:00" value="20:00" required>
-                        </div>
-                    </div>
+    <label for="time">Hora</label>
+    <select id="time" name="time" required>
+        <option value="" disabled selected>Seleccione una hora</option>
+        <option value="11:00">11:00 AM</option>
+        <option value="11:30">11:30 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="12:30">12:30 PM</option>
+        <option value="13:00">01:00 PM</option>
+        <option value="13:30">01:30 PM</option>
+        <option value="14:00">02:00 PM</option>
+        <option value="14:30">02:30 PM</option>
+        <option value="15:00">03:00 PM</option>
+        <option value="15:30">03:30 PM</option>
+        <option value="16:00">04:00 PM</option>
+        <option value="16:30">04:30 PM</option>
+        <option value="17:00">05:00 PM</option>
+        <option value="17:30">05:30 PM</option>
+        <option value="18:00">06:00 PM</option>
+        <option value="18:30">06:30 PM</option>
+        <option value="19:00">07:00 PM</option>
+    </select>
+</div>
                     
+                    
+
                     <div class="form-control full-width">
                         <label for="message">Peticiones Especiales (opcional)</label>
                         <textarea id="message" name="message" rows="4" placeholder="Indique si hay alergias, celebraciones, etc."></textarea>
                     </div>
 
+                    <div class="form-control checkbox-control full-width">
+                        <input type="checkbox" id="consent_data" name="consent_data" required>
+                        <label for="consent_data">Consentimiento de tratamiento de datos personales</label>
+                    </div>
+
+                    <div class="form-control checkbox-control full-width">
+                        <input type="checkbox" id="consent_comm" name="consent_comm" required>
+                        <label for="consent_comm">Consiento la recepción de comunicaciones del restaurante por e-mail, SMS y/o WhatsApp con fines comerciales</label>
+                    </div>
+
                     <button type="button" id="submitButton" class="cta-button submit-button">Confirmar Reserva</button>
-                    
+
+                    <p class="terms-note">Acepto las 
+    <a href="politicas.html#condiciones" target="_blank">condiciones de uso</a>, 
+    <a href="politicas.html#privacidad" target="_blank">política de privacidad</a> y 
+    <a href="politicas.html#aviso-legal" target="_blank">aviso legal</a>
+</p>
                 </form>
 
                 <p class="small-note">Para reservas de más de 10 personas, por favor llame directamente a +57 311 2534783.</p>
             </div>
         </section>
 
+<section id="contacto" class="content-section bg-dark">
+    <div class="container">
+        <h2>📍 Contáctanos</h2>
+        <p>Nuestros anfitriones son **guías del viaje Montana**. Comunícate para asegurar tu mesa y comenzar la experiencia.</p>
 
-       <section id="contacto" class="content-section">
-             <div class="container reveal-bottom">
-                <h2>VISÍTANOS</h2>
+        <div class="contact-info">
+
                 <div class="contact-info">
                     <p><strong>Dirección:</strong> Calle 9#22-17, San Andresito San José, Bogotá</p>
                     <p><strong>Horario:</strong> Lunes a Domingo: 10:00 AM - 08:00 PM</p>
                     <p><strong>Teléfono:</strong> (311) 2534783</p>
                     <p><strong>Correo:</strong> montanavinosyparrilla@gmail.com</p>
                     </div>
-             </div>
+            </div>
         </section>
 
-                <div class="container reveal-bottom">
-        <h2>MONTANA VINOS & PARRILLA</h2>
-        
-        <div class="contact-info">
+        <div class="container reveal-bottom">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.937052772137!2d-74.09302862465836!3d4.605293195369369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f997cc5b8ad07%3A0x1a8624e126396bd!2sMontana%20Vinos%20%26%20Parrilla!5e0!3m2!1ses!2sus!4v1762288690533!5m2!1ses!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Montana Vinos & Parrilla"
+                ></iframe>
             </div>
-
-        <div class="map-container">
-            <iframe 
-
-                
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.937052772137!2d-74.09302862465836!3d4.605293195369369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f997cc5b8ad07%3A0x1a8624e126396bd!2sMontana%20Vinos%20%26%20Parrilla!5e0!3m2!1ses!2sus!4v1762288690533!5m2!1ses!2sus" 
-    
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de Montana Vinos & Parrilla"
-            ></iframe>
         </div>
-      </div>
+        </main> 
 
-
-<footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://instagram.com/montanavinosyparrilla" target="_blank">Instagram</a>
-                <a href="https://tiktok.com/@montanavinosyparrilla" target="_blank">TikTok</a>
-                <a href="https://wa.me/573112534783" target="_blank">WhatsApp Business</a>
-            </div>
-            <p>© 2025 Montana Vinos & Parrilla SAS. Todos los derechos reservados.</p>
-            <p>Web: www.montanavinosyparrilla.com</p>
+    <footer>
+    <div class="container">
+        <p>© 2025 Montana Vinos & Parrilla SAS. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/montanavinosyparrilla/" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com/share/1Bo3wk4u7S/?mibextid=wwXIfr" target="_blank">Facebook</a> | 
+            <a href="https://www.tiktok.com/@montana.vinos.parrilla" target="_blank">TikTok</a> | 
+            <a href="https://wa.me/573112534783" target="_blank">WhatsApp</a> |
+            <a href="politicas.html" target="_blank">Aviso Legal</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
-</section>
-
-    </main>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     
-    <script>
-        // Inicialización y configuración de las animaciones
-        ScrollReveal({ 
-            distance: '60px',
-            duration: 1000,
-            delay: 100,
-            easing: 'ease-in-out'
-        });
-
-        // Aplicación de animaciones
-        ScrollReveal().reveal('.reveal-left', { origin: 'left' });
-        ScrollReveal().reveal('.reveal-right', { origin: 'right' });
-        ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom' });
-        
-        // Animación de los ítems del menú uno tras otro
-        ScrollReveal().reveal('.menu-item', { interval: 150 });
-        
-        // Animación de las imágenes de la galería
-        ScrollReveal().reveal('.gallery-grid img', { interval: 100, origin: 'top' });
-
-
-        // JAVASCRIPT PARA BARRA DE NAVEGACIÓN DINÁMICA
-        const header = document.querySelector('.navbar');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { 
-                header.classList.add('scrolled'); // Añade la clase 'scrolled'
-            } else {
-                header.classList.remove('scrolled'); // Remueve la clase 'scrolled'
-            }
-        });
-    </script>
-
-
-    <script>
-        let slideIndex = 0; // Índice inicial
-
-        document.addEventListener('DOMContentLoaded', function() {
-            showSlides(); // Llama a la función al cargar la página
-        });
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            
-            // Ocultar todas las slides
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            
-            // Avanzar al siguiente índice
-            slideIndex++;
-            
-            // Si el índice es mayor que el número de slides, vuelve a 1
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }    
-            
-            // Remover el estado activo de todos los dots
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            
-            // Mostrar la slide actual y activar el dot correspondiente
-            if (slides.length > 0) {
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-            }
-            
-            // Llamar a showSlides cada 4 segundos (4000 milisegundos)
-            setTimeout(showSlides, 4000); 
-        }
-        
-        // Función para cambiar slides manualmente al hacer click en los dots (opcional)
-        function currentSlide(n) {
-          slideIndex = n;
-          showSlides();
-        }
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('reservationForm');
-            const submitBtn = document.getElementById('submitButton');
-            // Reemplaza con tu número real, incluyendo código de país (Ej: '573101234567').
-            const WHATSAPP_NUMBER = '573112534783'; 
-            
-            
-            const getFormData = () => {
-                let isValid = true;
-                let data = {};
-                const requiredInputs = form.querySelectorAll('[required]');
-                
-                requiredInputs.forEach(input => {
-                    input.classList.remove('input-error');
-                    if (!input.value.trim()) { 
-                        isValid = false;
-                        input.classList.add('input-error');
-                    }
-                    data[input.name] = input.value.trim();
-                });
-                
-                const messageInput = document.getElementById('message');
-                data['message'] = messageInput && messageInput.value.trim() ? messageInput.value.trim() : 'Ninguna';
-
-                return isValid ? data : false;
-            };
-
-            submitBtn.addEventListener('click', (event) => {
-                event.preventDefault(); 
-
-                const formData = getFormData();
-
-                if (formData) {
-                    // CONSTRUCCIÓN del cuerpo del mensaje usando \n (salto de línea de JavaScript)
-                    const messageBody = 
-                        `¡Hola, Montana Vinos & Parrilla!\n\n` + 
-                        `Tengo una solicitud de RESERVA:\n` +
-                        `-------------------------------\n` +
-                        `Nombre: ${formData.name}\n` +
-                        `Email: ${formData.email}\n` +
-                        `Teléfono: ${formData.phone}\n` +
-                        `Personas: ${formData.guests}\n` +
-                        `Fecha: ${formData.date}\n` +
-                        `Hora: ${formData.time}\n` +
-                        `Peticiones: ${formData.message}\n\n` +
-                        `¡Espero su confirmación!`;
-
-                    // CODIFICACIÓN: Se aplica SÓLO una vez para convertir \n a %0A
-                    const encodedMessage = encodeURIComponent(messageBody);
-
-                    // CONSTRUCCIÓN FINAL del enlace de WhatsApp
-                    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-                    // Redirigir al usuario
-                    window.open(whatsappURL, '_blank');
-                    
-                    form.reset(); 
-                    
-                } else {
-                    alert('Por favor, complete todos los campos obligatorios marcados antes de continuar con la reserva.');
-                }
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const navLinks = document.querySelector('.nav-links');
-
-            // Función para alternar la clase 'active'
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-            
-            // Función para cerrar el menú al hacer clic en un enlace (en móvil)
-            const links = navLinks.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
+<div class="floating-social-bar">
+    <a href="https://www.instagram.com/montanavinosyparrilla/" target="_blank" class="social-icon instagram-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/573112534783" target="_blank" class="social-icon whatsapp-icon" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.tiktok.com/@montana.vinos.parrilla" target="_blank" class="social-icon tiktok-icon" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1Bo3wk4u7S/?mibextid=wwXIfr" target="_blank" class="social-icon facebook-icon" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+</a>
+</div>
 
 </body>
 </html>

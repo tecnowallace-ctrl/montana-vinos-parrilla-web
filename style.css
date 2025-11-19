@@ -113,7 +113,6 @@ a {
     color: var(--color-oro);
 }
 
-
 /* Estado 'Scrolled' de la barra de navegación (se activa con JavaScript) */
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.95); 
@@ -160,7 +159,6 @@ a {
     background-color: var(--color-oro);
     color: var(--color-fondo-negro);
 }
-
 
 /* ===== SECCIÓN HERO (INICIO) ===== */
 .hero {
@@ -289,6 +287,41 @@ a {
     vertical-align: middle;
 }
 
+/* Flechas de anterior y siguiente (MODIFICADAS PARA IR A LOS EXTREMOS) */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--color-oro); /* Color dorado */
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 10; /* Asegura que estén sobre la imagen */
+}
+
+/* Posicionar la flecha 'Anterior' en el extremo IZQUIERDO */
+.prev {
+  left: 0; 
+  border-radius: 0 3px 3px 0; /* Borde redondeado solo a la derecha */
+}
+
+/* Posicionar la flecha 'Siguiente' en el extremo DERECHO */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Borde redondeado solo a la izquierda */
+}
+
+/* Efecto de hover (Mantenido) */
+.prev:hover, .next:hover {
+  background-color: rgba(212, 175, 55, 0.8); /* Oro más opaco al pasar el ratón */
+  color: var(--color-fondo-negro);
+}
+
 /* Puntos indicadores (dots) */
 .dot {
     cursor: pointer;
@@ -315,7 +348,6 @@ a {
     from {opacity: .4} 
     to {opacity: 1}
 }
-
 
 /* ===== ESTILOS PARA EL FORMULARIO DE RESERVAS ===== */
 .reservation-form {
@@ -352,14 +384,28 @@ a {
 .form-control input,
 .form-control textarea,
 .form-control select {
-    padding: 0.8rem;
+  padding: 0.8rem;
     border: 1px solid #555;
     border-radius: 3px;
     background-color: var(--color-fondo-negro);
-    color: var(--color-texto-principal);
+    color: var(--color-texto-principal); /* ESTE ES EL COLOR DEL TEXTO */
     font-family: var(--font-cuerpo);
     font-size: 1rem;
     transition: border-color 0.3s ease;
+}
+
+/* Ajuste adicional para que la flecha del selector se vea en Chrome/Safari */
+.form-control select {
+    /* Remueve la apariencia nativa para aplicar estilos personalizados */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    /* Añade una flecha personalizada SVG (de color blanco/claro) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23f4f4f4" d="M7.247 11.14 2.451 5.617c-.114-.131-.088-.309.043-.42.13-.11.314-.087.425.044l4.29 4.978 4.301-5.006c.11-.129.288-.157.417-.043.129.11.157.288.043.417L8.765 11.14c-.11.13-.288.157-.417.043z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem; /* Deja espacio para la flecha */
 }
 
 .form-control input:focus,
@@ -374,12 +420,25 @@ a {
 }
 
 /* Estilo del botón de envío */
-.submit-button {
+/*.submit-button {
     width: 100%;
     margin-top: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
 }
+*/
+/* Estilo del botón de envío (AJUSTADO PARA WEB Y MÓVIL) */
+.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: block; 
+    
+    /* 🚨 LÍNEA AÑADIDA PARA FORZAR EL ANCHO TOTAL EN LAYOUTS AVANZADOS */
+    grid-column: 1 / -1; 
+}
+
 
 .small-note {
     font-size: 0.8rem;
@@ -391,6 +450,15 @@ a {
 .input-error {
     border-color: #ff4d4d !important; 
     box-shadow: 0 0 5px #ff4d4d;
+}
+
+/* * AÑADIR ESTE BLOQUE DE CÓDIGO para cambiar el color del icono
+ * del calendario (date) y del reloj (time) 
+ */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invierte los colores (negro a blanco) */
+    cursor: pointer;
 }
 
 
@@ -433,7 +501,6 @@ footer {
     color: var(--color-texto-principal);
 }
 
-
 /* ===== MENÚ HAMBURGUESA (MÓVIL) ===== */
 
 /* Estilo del botón hamburguesa */
@@ -442,7 +509,7 @@ footer {
     font-size: 2rem;
     background: none;
     border: none;
-    color: var(--color-texto-principal); /* Cambiado de --color-blanco */
+    color: var(--color-texto-principal); 
     cursor: pointer;
     padding: 0;
     z-index: 1001; 
@@ -530,4 +597,273 @@ footer {
         grid-template-columns: 1fr; 
         gap: 1rem;
     }
+}
+
+/* ===== ESTILOS PARA CHECKBOXES DE FORMULARIO ===== */
+
+.checkbox-control {
+    flex-direction: row; /* Anula el 'column' de .form-control */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 1rem;
+}
+
+.checkbox-control input[type="checkbox"] {
+    width: auto; /* Revierte el 100% de .form-control input */
+    margin-right: 0.8rem; /* Espacio entre el check y el texto */
+    
+    /* Estilos personalizados para el cajetín */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25em; /* Tamaño del cajetín */
+    height: 1.25em;
+    background-color: var(--color-fondo-negro);
+    border: 1px solid var(--color-oro);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle; /* Alineación */
+}
+
+/* Estilo para la marca (el 'check') cuando está seleccionado */
+.checkbox-control input[type="checkbox"]:checked {
+    background-color: var(--color-oro);
+}
+
+/* Opcional: Dibujar la marca (palomita) con CSS */
+.checkbox-control input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--color-fondo-negro); /* Color de la palomita */
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-control label {
+    /* Ajustar la etiqueta */
+    font-size: 0.9rem;
+    font-weight: 300; /* Texto más suave */
+    color: var(--color-texto-secundario); /* Color más suave */
+    text-transform: none; /* No en mayúsculas */
+    margin-bottom: 0;
+}
+
+/* Marcar el checkbox si hay un error de validación (no marcado) */
+.checkbox-control input[type="checkbox"].input-error {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 5px #ff4d4d;
+}
+
+/* ===== ESTILOS PARA NOTA DE TÉRMINOS (AJUSTADO PARA WEB Y MÓVIL) ===== */
+.terms-note {
+    font-size: 0.8rem;
+    color: var(--color-texto-secundario); 
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%; 
+    display: block; 
+
+    /* 🚨 LÍNEA AÑADIDA PARA FORZAR EL ANCHO TOTAL EN LAYOUTS AVANZADOS */
+    grid-column: 1 / -1;
+}
+
+/* Estilo para los enlaces dentro del mensaje legal */
+.terms-note a {
+    color: var(--color-oro); /* Color dorado sutil */
+    text-decoration: underline; /* Subrayado para indicar que es un enlace */
+    transition: color 0.3s ease;
+}
+
+.terms-note a:hover {
+    color: var(--color-texto-principal); /* Blanco al pasar el ratón */
+}
+
+/* ===== ESTILOS PARA PÁGINA LEGAL (politicas.html) ===== */
+
+/* Contenedor del logo en la página legal */
+.logo-header-legal {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--color-fondo-negro);
+    border-bottom: 1px solid var(--color-oro);
+}
+
+.logo-header-legal img {
+    height: 100px; /* Tamaño del logo en la página legal */
+}
+
+/* Contenido principal de la página legal (para espaciado) */
+.legal-content {
+    padding: 3rem 0;
+    text-align: left; /* El texto debe ser legible y alineado a la izquierda */
+}
+
+.legal-content h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-texto-secundario);
+}
+
+/* ===== ESTILOS PARA LA TABLA DE PROTECCIÓN DE DATOS ===== */
+
+.data-protection-table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse; /* Bordes unidos */
+    font-family: var(--font-cuerpo);
+    font-size: 0.95rem;
+}
+
+.data-protection-table th,
+.data-protection-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #333; /* Línea de separación sutil */
+}
+
+.data-protection-table th {
+    background-color: var(--color-fondo-negro);
+    color: var(--color-oro); /* Encabezados en color dorado */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.data-protection-table tr:nth-child(even) {
+    background-color: #0d0d0d; /* Ligero color oscuro para filas pares */
+}
+
+.data-protection-table tr:hover {
+    background-color: #2a2a2a; /* Cambio de color al pasar el ratón */
+}
+
+.data-protection-table td:first-child {
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    width: 30%; /* Da más peso visual al elemento */
+}
+/* ===== AJUSTES ESPECÍFICOS PARA EL CARRUSEL DEL MENÚ (SECTION #MENU) ===== */
+
+/* Contenedor del Carrusel del Menú */
+.menu-slideshow {
+    max-width: 800px; /* Tamaño máximo para el menú */
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Reutiliza estilos del carrusel de galería para bordes y sombras */
+}
+
+.menu-slideshow .myMenuSlides {
+    display: none;
+    position: relative;
+    /* Asegura que el contenedor de texto esté posicionado correctamente */
+}
+
+.menu-slideshow .menu-image {
+    width: 100%;
+    /* La altura debe ser automática para evitar distorsión, o fija para uniformidad. 
+       Ajustamos la altura y el object-fit para que sea responsive: */
+    height: auto; 
+    max-height: 80vh; /* Máximo 80% de la altura de la vista en móvil */
+    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+    background-color: var(--color-fondo-negro); /* Fondo si la imagen no es 100% ancha/alta */
+}
+
+/* Texto de título sobre la imagen (opcional) */
+.menu-caption {
+    color: var(--color-oro);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--color-fondo-negro);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* Flechas específicas del menú para diferenciarlas de la galería */
+.menu-arrow {
+    color: var(--color-oro);
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 25px;
+    padding: 12px;
+}
+
+.menu-arrow:hover {
+    background-color: rgba(212, 175, 55, 0.9);
+    color: var(--color-fondo-negro);
+}
+
+/* ===== ESTILOS PARA LA BARRA SOCIAL FLOTANTE ===== */
+
+.floating-social-bar {
+    position: fixed; /* Mantiene la barra fija al hacer scroll */
+    right: 0; /* Lo fija al costado derecho */
+    top: 50%; /* Lo centra verticalmente (ajustado con transform) */
+    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio entre los iconos */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Tamaño del icono */
+    height: 45px;
+    background-color: var(--color-fondo-negro);
+    border: 1px solid var(--color-oro);
+    color: var(--color-oro); /* Color del icono: Dorado */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados solo a la izquierda */
+    font-size: 1.5rem; /* Tamaño del icono de Font Awesome */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    width: 50px; /* Expande ligeramente al pasar el ratón */
+    background-color: var(--color-oro); /* Invierte colores en hover */
+    color: var(--color-fondo-negro);
+    box-shadow: -5px 0 15px rgba(212, 175, 55, 0.6);
+}
+
+/* Ocultar en pantallas muy pequeñas si interfiere con el contenido */
+@media (max-width: 600px) {
+    /* Opcional: Solo mostrar WhatsApp en móvil para contacto directo y rápido */
+    .floating-social-bar {
+        gap: 0;
+        top: auto; 
+        bottom: 15px; 
+        right: 15px;
+        flex-direction: row;
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Ocultar todos excepto WhatsApp en móvil */
+    .floating-social-bar a:not(.whatsapp-icon) {
+        display: none;
+    }
+}
+
+/* Ajuste sutil al título de la sección para el toque de elegancia */
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    /* 🚨 LÍNEAS AÑADIDAS */
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3); /* Borde dorado sutil */
+    padding-bottom: 0.5rem;
 }
