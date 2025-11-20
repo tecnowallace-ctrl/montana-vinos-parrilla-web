@@ -6,15 +6,15 @@
 /* ===== CONFIGURACIÓN GLOBAL (VARIABLES Y RESETEO) ===== */
 :root {
     /* Paleta de Colores */
-    --color-oro: #D4AF37; 
-    --color-fondo-oscuro: #1a1a1a; 
-    --color-fondo-negro: #000000; 
-    --color-texto-principal: #f4f4f4; 
-    --color-texto-secundario: #aaaaaa; 
+    --color-oro: #D4AF37;
+    --color-fondo-oscuro: #1a1a1a;
+    --color-fondo-negro: #000000;
+    --color-texto-principal: #f4f4f4;
+    --color-texto-secundario: #aaaaaa;
 
     /* Tipografía */
-    --font-titulos: 'Playfair Display', serif; 
-    --font-cuerpo: 'Montserrat', sans-serif; 
+    --font-titulos: 'Playfair Display', serif;
+    --font-cuerpo: 'Montserrat', sans-serif;
 }
 
 /* Reseteo básico */
@@ -25,7 +25,7 @@
 }
 
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 body {
@@ -41,9 +41,11 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-titulos);
-    color: var(--color-oro); 
+    color: var(--color-oro);
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -69,8 +71,8 @@ a {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #333;
-    transition: background-color 0.4s ease, padding 0.4s ease; 
-    
+    transition: background-color 0.4s ease, padding 0.4s ease;
+
     /* Configuración principal de la barra (para PC) */
     display: flex;
     justify-content: space-between;
@@ -87,13 +89,14 @@ a {
 }
 
 .navbar .logo img {
-    height: 70px; 
-    transition: height 0.4s ease; 
+    height: 70px;
+    transition: height 0.4s ease;
 }
 
 .nav-links {
     list-style: none;
-    display: flex; /* En PC se muestran en línea */
+    display: flex;
+    /* En PC se muestran en línea */
     align-items: center;
 }
 
@@ -106,7 +109,8 @@ a {
     font-weight: 400;
     transition: color 0.3s ease;
     text-transform: uppercase;
-    padding: 0.5rem 0; /* Ajuste para hover */
+    padding: 0.5rem 0;
+    /* Ajuste para hover */
 }
 
 .nav-links li a:hover {
@@ -115,32 +119,32 @@ a {
 
 /* Estado 'Scrolled' de la barra de navegación (se activa con JavaScript) */
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.95); 
-    padding: 0.5rem 5%; 
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar.scrolled .logo img {
-    height: 50px; 
+    height: 50px;
 }
 
 /* ===== BOTONES (Call to Action - CTA) ===== */
 .cta-button {
     background-color: var(--color-oro);
-    color: var(--color-fondo-negro); 
+    color: var(--color-fondo-negro);
     padding: 0.75rem 1.25rem;
     border-radius: 5px;
     font-weight: 700;
     transition: all 0.3s ease;
     box-shadow: 0 0 0 rgba(212, 175, 55, 0.5);
-    border: none; 
+    border: none;
     cursor: pointer;
 }
 
 .cta-button:hover {
     background-color: var(--color-texto-principal);
     color: var(--color-fondo-negro);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4); 
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 /* Botón con borde (outline) */
@@ -167,16 +171,16 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; 
+    padding-top: 80px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/FotoBar.jpeg');
     background-size: cover;
     background-position: center top;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .hero-content p {
@@ -192,7 +196,7 @@ a {
 }
 
 #galeria {
-    padding: 8rem 0; 
+    padding: 8rem 0;
     background-color: var(--color-fondo-negro);
 }
 
@@ -202,7 +206,7 @@ a {
 }
 
 .content-section .container {
-    max-width: 800px; 
+    max-width: 800px;
 }
 
 .bg-dark {
@@ -214,33 +218,33 @@ a {
     font-family: var(--font-cuerpo);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-texto-principal); 
+    color: var(--color-texto-principal);
     text-align: left;
     max-width: 800px;
-    margin: 3rem auto 1.5rem; 
+    margin: 3rem auto 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-oro); 
+    border-bottom: 2px solid var(--color-oro);
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 0.5rem; 
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
     text-align: left;
     margin: 0 auto;
-    max-width: 800px; 
+    max-width: 800px;
 }
 
 .menu-item {
-    background: none; 
-    padding: 1.2rem 0; 
-    border-left: none; 
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1); 
+    background: none;
+    padding: 1.2rem 0;
+    border-left: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
 }
 
-.menu-item h4 { 
+.menu-item h4 {
     font-family: var(--font-titulos);
     font-size: 1.3rem;
     color: var(--color-oro);
@@ -249,7 +253,7 @@ a {
 
 .menu-item-detail {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 0;
     color: var(--color-texto-secundario);
@@ -258,7 +262,7 @@ a {
 
 .menu-item-detail .price {
     font-weight: 700;
-    color: var(--color-oro); 
+    color: var(--color-oro);
     font-style: normal;
 }
 
@@ -266,60 +270,68 @@ a {
 
 /* Contenedor del Carrusel */
 .slideshow-container {
-    max-width: 1000px; 
+    max-width: 1000px;
     position: relative;
     margin: auto;
-    border: 3px solid var(--color-oro); 
+    border: 3px solid var(--color-oro);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
 /* Contenedor de cada slide */
 .mySlides {
-    display: none; 
+    display: none;
 }
 
 /* Estilo de la imagen dentro del carrusel */
 .slideshow-container img {
     width: 100%;
-    height: 330px; 
-    object-fit: cover; 
+    height: 330px;
+    object-fit: cover;
     vertical-align: middle;
 }
 
 /* Flechas de anterior y siguiente (MODIFICADAS PARA IR A LOS EXTREMOS) */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: var(--color-oro); /* Color dorado */
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  user-select: none;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  z-index: 10; /* Asegura que estén sobre la imagen */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--color-oro);
+    /* Color dorado */
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 10;
+    /* Asegura que estén sobre la imagen */
 }
 
 /* Posicionar la flecha 'Anterior' en el extremo IZQUIERDO */
 .prev {
-  left: 0; 
-  border-radius: 0 3px 3px 0; /* Borde redondeado solo a la derecha */
+    left: 0;
+    border-radius: 0 3px 3px 0;
+    /* Borde redondeado solo a la derecha */
 }
 
 /* Posicionar la flecha 'Siguiente' en el extremo DERECHO */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px; /* Borde redondeado solo a la izquierda */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    /* Borde redondeado solo a la izquierda */
 }
 
 /* Efecto de hover (Mantenido) */
-.prev:hover, .next:hover {
-  background-color: rgba(212, 175, 55, 0.8); /* Oro más opaco al pasar el ratón */
-  color: var(--color-fondo-negro);
+.prev:hover,
+.next:hover {
+    background-color: rgba(212, 175, 55, 0.8);
+    /* Oro más opaco al pasar el ratón */
+    color: var(--color-fondo-negro);
 }
 
 /* Puntos indicadores (dots) */
@@ -334,8 +346,9 @@ a {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-    background-color: var(--color-oro); 
+.active,
+.dot:hover {
+    background-color: var(--color-oro);
 }
 
 /* Animación de transición (Fade) */
@@ -345,8 +358,13 @@ a {
 }
 
 @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* ===== ESTILOS PARA EL FORMULARIO DE RESERVAS ===== */
@@ -363,7 +381,7 @@ a {
 
 .form-group-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -376,7 +394,7 @@ a {
 .form-control label {
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--color-oro); 
+    color: var(--color-oro);
     margin-bottom: 0.4rem;
     text-transform: uppercase;
 }
@@ -384,11 +402,12 @@ a {
 .form-control input,
 .form-control textarea,
 .form-control select {
-  padding: 0.8rem;
+    padding: 0.8rem;
     border: 1px solid #555;
     border-radius: 3px;
     background-color: var(--color-fondo-negro);
-    color: var(--color-texto-principal); /* ESTE ES EL COLOR DEL TEXTO */
+    color: var(--color-texto-principal);
+    /* ESTE ES EL COLOR DEL TEXTO */
     font-family: var(--font-cuerpo);
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -397,7 +416,7 @@ a {
 /* Ajuste adicional para que la flecha del selector se vea en Chrome/Safari */
 .form-control select {
     /* Remueve la apariencia nativa para aplicar estilos personalizados */
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     /* Añade una flecha personalizada SVG (de color blanco/claro) */
@@ -405,18 +424,19 @@ a {
     background-repeat: no-repeat;
     background-position: right 0.8rem center;
     background-size: 1rem;
-    padding-right: 2.5rem; /* Deja espacio para la flecha */
+    padding-right: 2.5rem;
+    /* Deja espacio para la flecha */
 }
 
 .form-control input:focus,
 .form-control textarea:focus {
-    border-color: var(--color-oro); 
+    border-color: var(--color-oro);
     outline: none;
     box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 .form-control.full-width {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
 }
 
 /* Estilo del botón de envío */
@@ -433,10 +453,10 @@ a {
     margin-top: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
-    display: block; 
-    
+    display: block;
+
     /* 🚨 LÍNEA AÑADIDA PARA FORZAR EL ANCHO TOTAL EN LAYOUTS AVANZADOS */
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
 }
 
 
@@ -448,7 +468,7 @@ a {
 
 /* ESTILO PARA VALIDACIÓN DE ERRORES (JavaScript) */
 .input-error {
-    border-color: #ff4d4d !important; 
+    border-color: #ff4d4d !important;
     box-shadow: 0 0 5px #ff4d4d;
 }
 
@@ -457,7 +477,8 @@ a {
  */
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(1); /* Invierte los colores (negro a blanco) */
+    filter: invert(1);
+    /* Invierte los colores (negro a blanco) */
     cursor: pointer;
 }
 
@@ -471,10 +492,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .map-container {
     width: 100%;
-    max-width: 1000px; 
+    max-width: 1000px;
     margin: 2rem auto 0;
     overflow: hidden;
-    border: 3px solid var(--color-oro); 
+    border: 3px solid var(--color-oro);
     border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
@@ -505,96 +526,107 @@ footer {
 
 /* Estilo del botón hamburguesa */
 .hamburger-menu {
-    display: none; /* Por defecto, oculto en PC */
+    display: none;
+    /* Por defecto, oculto en PC */
     font-size: 2rem;
     background: none;
     border: none;
-    color: var(--color-texto-principal); 
+    color: var(--color-texto-principal);
     cursor: pointer;
     padding: 0;
-    z-index: 1001; 
+    z-index: 1001;
 }
 
 /* REGLAS PARA PANTALLAS PEQUEÑAS (MÓVILES) */
 @media (max-width: 900px) {
+
     /* 🚨 1. CONFIGURACIÓN DEL NAVBAR EN MÓVIL */
     .navbar {
         /* Desactiva el justify-content: space-between original */
-        justify-content: flex-start; 
-        padding-left: 0; 
+        justify-content: flex-start;
+        padding-left: 0;
         padding-right: 0;
-        display: block; /* Permite que el header ocupe todo el ancho sin flex */
+        display: block;
+        /* Permite que el header ocupe todo el ancho sin flex */
     }
-    
+
     /* 🚨 2. CONTENEDOR DE LOGO Y BOTÓN */
     .navbar-header {
         display: flex;
-        justify-content: space-between; /* Mueve el logo a un lado y el botón al otro */
+        justify-content: space-between;
+        /* Mueve el logo a un lado y el botón al otro */
         align-items: center;
         width: 100%;
-        padding: 0.5rem 5%; /* Añade el padding aquí, no en el .navbar */
+        padding: 0.5rem 5%;
+        /* Añade el padding aquí, no en el .navbar */
     }
-    
+
     /* 🚨 3. CENTRAR EL LOGO EN MÓVIL */
     .navbar-header .logo {
-        flex-grow: 1; /* Permite que el logo ocupe el espacio restante */
-        text-align: center; /* Centra el contenido (el logo) */
-        padding-right: 2rem; /* Deja un espacio a la derecha para que el logo se centre mejor, compensando el ancho del botón */
+        flex-grow: 1;
+        /* Permite que el logo ocupe el espacio restante */
+        text-align: center;
+        /* Centra el contenido (el logo) */
+        padding-right: 2rem;
+        /* Deja un espacio a la derecha para que el logo se centre mejor, compensando el ancho del botón */
     }
 
     /* Mostrar el botón hamburguesa en la derecha */
     .hamburger-menu {
-        display: block; 
+        display: block;
     }
-    
+
     /* 🚨 4. ESTILOS DEL MENÚ DESPLEGADO (NAV LINKS) */
     .nav-links {
-        display: none; /* Se ocultarán por defecto */
-        flex-direction: column; 
+        display: none;
+        /* Se ocultarán por defecto */
+        flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 80px; 
+        top: 80px;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.98); 
+        background-color: rgba(0, 0, 0, 0.98);
         border-top: 1px solid var(--color-oro);
-        height: 0; 
-        overflow: hidden; 
-        transition: height 0.3s ease-in-out; 
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
     }
 
     /* 5. Mostrar el menú cuando tiene la clase 'active' */
     .nav-links.active {
-        display: flex; 
-        height: auto; 
+        display: flex;
+        height: auto;
         padding-bottom: 1rem;
     }
 
     /* 🚨 6. JUSTIFICAR ENLACES A LA IZQUIERDA */
     .nav-links li {
         margin: 0;
-        text-align: left; /* Justificación a la izquierda */
+        text-align: left;
+        /* Justificación a la izquierda */
         width: 100%;
-        padding: 0.3rem 5%; /* Añade padding para separación y alineación */
+        padding: 0.3rem 5%;
+        /* Añade padding para separación y alineación */
     }
-    
+
     /* Pequeño ajuste para el botón 'Reservar' en el menú desplegado */
     .nav-links li .cta-button {
         display: inline-block;
         width: auto;
         margin-top: 0.5rem;
     }
-    
+
     /* Ajustes generales para el resto del sitio en móvil */
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .content-section {
         padding: 4rem 0;
     }
-    
+
     .form-group-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 }
@@ -602,26 +634,32 @@ footer {
 /* ===== ESTILOS PARA CHECKBOXES DE FORMULARIO ===== */
 
 .checkbox-control {
-    flex-direction: row; /* Anula el 'column' de .form-control */
-    align-items: center; /* Centra verticalmente */
+    flex-direction: row;
+    /* Anula el 'column' de .form-control */
+    align-items: center;
+    /* Centra verticalmente */
     margin-bottom: 1rem;
 }
 
 .checkbox-control input[type="checkbox"] {
-    width: auto; /* Revierte el 100% de .form-control input */
-    margin-right: 0.8rem; /* Espacio entre el check y el texto */
-    
+    width: auto;
+    /* Revierte el 100% de .form-control input */
+    margin-right: 0.8rem;
+    /* Espacio entre el check y el texto */
+
     /* Estilos personalizados para el cajetín */
     -webkit-appearance: none;
     appearance: none;
-    width: 1.25em; /* Tamaño del cajetín */
+    width: 1.25em;
+    /* Tamaño del cajetín */
     height: 1.25em;
     background-color: var(--color-fondo-negro);
     border: 1px solid var(--color-oro);
     border-radius: 3px;
     cursor: pointer;
     position: relative;
-    vertical-align: middle; /* Alineación */
+    vertical-align: middle;
+    /* Alineación */
 }
 
 /* Estilo para la marca (el 'check') cuando está seleccionado */
@@ -637,7 +675,8 @@ footer {
     top: 2px;
     width: 5px;
     height: 10px;
-    border: solid var(--color-fondo-negro); /* Color de la palomita */
+    border: solid var(--color-fondo-negro);
+    /* Color de la palomita */
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
@@ -645,9 +684,12 @@ footer {
 .checkbox-control label {
     /* Ajustar la etiqueta */
     font-size: 0.9rem;
-    font-weight: 300; /* Texto más suave */
-    color: var(--color-texto-secundario); /* Color más suave */
-    text-transform: none; /* No en mayúsculas */
+    font-weight: 300;
+    /* Texto más suave */
+    color: var(--color-texto-secundario);
+    /* Color más suave */
+    text-transform: none;
+    /* No en mayúsculas */
     margin-bottom: 0;
 }
 
@@ -660,11 +702,11 @@ footer {
 /* ===== ESTILOS PARA NOTA DE TÉRMINOS (AJUSTADO PARA WEB Y MÓVIL) ===== */
 .terms-note {
     font-size: 0.8rem;
-    color: var(--color-texto-secundario); 
+    color: var(--color-texto-secundario);
     text-align: center;
     margin-top: 1.5rem;
-    width: 100%; 
-    display: block; 
+    width: 100%;
+    display: block;
 
     /* 🚨 LÍNEA AÑADIDA PARA FORZAR EL ANCHO TOTAL EN LAYOUTS AVANZADOS */
     grid-column: 1 / -1;
@@ -672,13 +714,16 @@ footer {
 
 /* Estilo para los enlaces dentro del mensaje legal */
 .terms-note a {
-    color: var(--color-oro); /* Color dorado sutil */
-    text-decoration: underline; /* Subrayado para indicar que es un enlace */
+    color: var(--color-oro);
+    /* Color dorado sutil */
+    text-decoration: underline;
+    /* Subrayado para indicar que es un enlace */
     transition: color 0.3s ease;
 }
 
 .terms-note a:hover {
-    color: var(--color-texto-principal); /* Blanco al pasar el ratón */
+    color: var(--color-texto-principal);
+    /* Blanco al pasar el ratón */
 }
 
 /* ===== ESTILOS PARA PÁGINA LEGAL (politicas.html) ===== */
@@ -692,13 +737,15 @@ footer {
 }
 
 .logo-header-legal img {
-    height: 100px; /* Tamaño del logo en la página legal */
+    height: 100px;
+    /* Tamaño del logo en la página legal */
 }
 
 /* Contenido principal de la página legal (para espaciado) */
 .legal-content {
     padding: 3rem 0;
-    text-align: left; /* El texto debe ser legible y alineado a la izquierda */
+    text-align: left;
+    /* El texto debe ser legible y alineado a la izquierda */
 }
 
 .legal-content h2 {
@@ -712,7 +759,8 @@ footer {
 .data-protection-table {
     width: 100%;
     margin: 1.5rem 0;
-    border-collapse: collapse; /* Bordes unidos */
+    border-collapse: collapse;
+    /* Bordes unidos */
     font-family: var(--font-cuerpo);
     font-size: 0.95rem;
 }
@@ -721,34 +769,41 @@ footer {
 .data-protection-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #333; /* Línea de separación sutil */
+    border-bottom: 1px solid #333;
+    /* Línea de separación sutil */
 }
 
 .data-protection-table th {
     background-color: var(--color-fondo-negro);
-    color: var(--color-oro); /* Encabezados en color dorado */
+    color: var(--color-oro);
+    /* Encabezados en color dorado */
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .data-protection-table tr:nth-child(even) {
-    background-color: #0d0d0d; /* Ligero color oscuro para filas pares */
+    background-color: #0d0d0d;
+    /* Ligero color oscuro para filas pares */
 }
 
 .data-protection-table tr:hover {
-    background-color: #2a2a2a; /* Cambio de color al pasar el ratón */
+    background-color: #2a2a2a;
+    /* Cambio de color al pasar el ratón */
 }
 
 .data-protection-table td:first-child {
     font-weight: 700;
     color: var(--color-texto-principal);
-    width: 30%; /* Da más peso visual al elemento */
+    width: 30%;
+    /* Da más peso visual al elemento */
 }
+
 /* ===== AJUSTES ESPECÍFICOS PARA EL CARRUSEL DEL MENÚ (SECTION #MENU) ===== */
 
 /* Contenedor del Carrusel del Menú */
 .menu-slideshow {
-    max-width: 800px; /* Tamaño máximo para el menú */
+    max-width: 800px;
+    /* Tamaño máximo para el menú */
     margin-bottom: 2rem;
     border-radius: 8px;
     overflow: hidden;
@@ -765,10 +820,13 @@ footer {
     width: 100%;
     /* La altura debe ser automática para evitar distorsión, o fija para uniformidad. 
        Ajustamos la altura y el object-fit para que sea responsive: */
-    height: auto; 
-    max-height: 80vh; /* Máximo 80% de la altura de la vista en móvil */
-    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
-    background-color: var(--color-fondo-negro); /* Fondo si la imagen no es 100% ancha/alta */
+    height: auto;
+    max-height: 80vh;
+    /* Máximo 80% de la altura de la vista en móvil */
+    object-fit: contain;
+    /* Asegura que la imagen completa se vea sin recortar */
+    background-color: var(--color-fondo-negro);
+    /* Fondo si la imagen no es 100% ancha/alta */
 }
 
 /* Texto de título sobre la imagen (opcional) */
@@ -802,48 +860,62 @@ footer {
 /* ===== ESTILOS PARA LA BARRA SOCIAL FLOTANTE ===== */
 
 .floating-social-bar {
-    position: fixed; /* Mantiene la barra fija al hacer scroll */
-    right: 0; /* Lo fija al costado derecho */
-    top: 50%; /* Lo centra verticalmente (ajustado con transform) */
-    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    position: fixed;
+    /* Mantiene la barra fija al hacer scroll */
+    right: 0;
+    /* Lo fija al costado derecho */
+    top: 50%;
+    /* Lo centra verticalmente (ajustado con transform) */
+    transform: translateY(-50%);
+    /* Ajuste fino para centrado vertical */
+    z-index: 999;
+    /* Asegura que esté por encima de otros elementos */
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Espacio entre los iconos */
+    gap: 5px;
+    /* Espacio entre los iconos */
 }
 
 .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px; /* Tamaño del icono */
+    width: 45px;
+    /* Tamaño del icono */
     height: 45px;
     background-color: var(--color-fondo-negro);
     border: 1px solid var(--color-oro);
-    color: var(--color-oro); /* Color del icono: Dorado */
-    border-radius: 5px 0 0 5px; /* Bordes redondeados solo a la izquierda */
-    font-size: 1.5rem; /* Tamaño del icono de Font Awesome */
+    color: var(--color-oro);
+    /* Color del icono: Dorado */
+    border-radius: 5px 0 0 5px;
+    /* Bordes redondeados solo a la izquierda */
+    font-size: 1.5rem;
+    /* Tamaño del icono de Font Awesome */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    width: 50px; /* Expande ligeramente al pasar el ratón */
-    background-color: var(--color-oro); /* Invierte colores en hover */
+    width: 50px;
+    /* Expande ligeramente al pasar el ratón */
+    background-color: var(--color-oro);
+    /* Invierte colores en hover */
     color: var(--color-fondo-negro);
     box-shadow: -5px 0 15px rgba(212, 175, 55, 0.6);
 }
 
 /* Ocultar en pantallas muy pequeñas si interfiere con el contenido */
 @media (max-width: 600px) {
+
     /* Opcional: Solo mostrar WhatsApp en móvil para contacto directo y rápido */
     .floating-social-bar {
         gap: 0;
-        top: auto; 
-        bottom: 15px; 
+        top: auto;
+        bottom: 15px;
         right: 15px;
         flex-direction: row;
     }
+
     .social-icon {
         width: 50px;
         height: 50px;
@@ -852,7 +924,7 @@ footer {
         border: none;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    
+
     /* Ocultar todos excepto WhatsApp en móvil */
     .floating-social-bar a:not(.whatsapp-icon) {
         display: none;
@@ -864,6 +936,14 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     /* 🚨 LÍNEAS AÑADIDAS */
-    border-bottom: 2px solid rgba(212, 175, 55, 0.3); /* Borde dorado sutil */
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    /* Borde dorado sutil */
     padding-bottom: 0.5rem;
+}
+
+/* Fuerza la negrita para la etiqueta STRONG, usada en la Mística de Montana */
+strong,
+b {
+    font-weight: 700 !important;
+    /* El valor 700 corresponde a la negrita */
 }
