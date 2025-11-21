@@ -39,6 +39,7 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 h1,
@@ -802,12 +803,12 @@ footer {
 
 /* Contenedor del Carrusel del Menú */
 .menu-slideshow {
-    max-width: 800px;
-    /* Tamaño máximo para el menú */
+    /* 🚨 AUMENTO DE TAMAÑO PARA PANTALLAS GRANDES */
+    max-width: 1000px; 
     margin-bottom: 2rem;
     border-radius: 8px;
     overflow: hidden;
-    /* Reutiliza estilos del carrusel de galería para bordes y sombras */
+    /* ... */
 }
 
 .menu-slideshow .myMenuSlides {
@@ -830,18 +831,17 @@ footer {
 }
 
 /* Texto de título sobre la imagen (opcional) */
-.menu-caption {
+
+    .menu-caption { 
     color: var(--color-oro);
-    font-size: 1.2rem;
-    padding: 1rem 0;
+    font-size: 1.2rem; padding: 1rem 0;
     text-align: center;
     background-color: var(--color-fondo-negro);
     font-weight: 700;
     text-transform: uppercase;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0.9;
+    /* ESTOS TRES PROPIEDADES FUERON ELIMINADAS */ /* position: absolute; */ /* bottom: 0; */ /* opacity: 0.9; */ /* Aseguramos que se muestre como un bloque debajo de la imagen */ 
+    display: block;
+    width: 100%; 
 }
 
 /* Flechas específicas del menú para diferenciarlas de la galería */
@@ -946,4 +946,40 @@ strong,
 b {
     font-weight: 700 !important;
     /* El valor 700 corresponde a la negrita */
+}
+
+/* Ajuste de tamaño de texto para la sección de la Mística */
+#historia p {
+    font-size: 1.20rem; /* Aumenta el tamaño de la fuente para los párrafos de la historia */
+    line-height: 1.8; /* Mejora la legibilidad con mayor espacio entre líneas */
+    font-weight: 400; /* Asegura un peso de fuente legible, 300 es muy delgado para un tamaño mayor */
+}
+
+/* Estilos para el contenedor de la sección Historia */
+#historia .container {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 3rem 2rem; /* Espacio para el texto */
+    position: relative; /* **IMPORTANTE**: Necesario para posicionar el pseudo-elemento */
+    z-index: 1; /* Asegura que el contenido esté por encima del logo de fondo */
+    background-color: var(--color-fondo-oscuro); /* Asegura que haya un fondo para el contenido */
+    border-radius: 8px; /* Opcional: añade bordes redondeados al contenedor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Opcional: añade una sombra sutil */
+}
+
+/* Pseudo-elemento para el logo de fondo en la sección Historia */
+#historia .container::before {
+    content: ''; /* Obligatorio para pseudo-elementos */
+    position: absolute; /* Posiciona el logo respecto al contenedor padre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/logo.png'); /* Ruta a tu logo */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%; /* Ajusta el tamaño del logo */
+    opacity: 0.2; /* **IMPORTANTE**: Controla la transparencia del logo (0.05 a 0.15 es buen rango) */
+    z-index: -1; /* Envía el logo detrás del contenido real */
+    pointer-events: none; /* Asegura que no interfiera con la selección de texto o clics */
 }
