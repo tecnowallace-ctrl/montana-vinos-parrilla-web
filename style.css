@@ -983,3 +983,23 @@ b {
     z-index: -1; /* Envía el logo detrás del contenido real */
     pointer-events: none; /* Asegura que no interfiera con la selección de texto o clics */
 }
+
+/* AJUSTES ESPECÍFICOS PARA EL LOGO DE FONDO EN MÓVILES (Menos de 768px) */
+@media (max-width: 768px) {
+    
+    #historia .container::before {
+        /* Aumentamos la opacidad para que se destaque más en la vista móvil */
+        opacity: 0.35; 
+        
+        /* Aseguramos que el logo quepa completamente dentro del contenedor */
+        background-size: contain; 
+        
+        /* Opcional: Centramos verticalmente de nuevo */
+        background-position: center center;
+    }
+    
+    /* Si el texto de la historia en el móvil se ve demasiado grande, podemos ajustarlo */
+    #historia p {
+        font-size: 1rem;
+    }
+}

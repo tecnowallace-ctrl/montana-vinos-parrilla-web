@@ -7,9 +7,11 @@
   "@context": "http://schema.org",
   "@type": "Restaurant",
   "name": "Montana Vinos & Parrilla SAS",
-  "image": "http://www.montanavinosyparrilla.com/img/logo.png", 
-  "url": "http://www.montanavinosyparrilla.com/", 
+  
+  "url": "https://www.montanavinosyparrilla.com/", 
+  "image": "https://www.montanavinosyparrilla.com/img/logo.png", 
   "telephone": "+573112534783",
+  
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Calle 9#22-17, San Andresito San José",
@@ -18,17 +20,32 @@
     "postalCode": "111611",
     "addressCountry": "CO"
   },
-  "servesCuisine": "Parrilla, Carnes Premium, Vinos",
-  "priceRange": "350000 - 60000", 
-  "hasMap": "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4318.705080744742!2d-74.09302862465839!3d4.605293195369369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f997cc5b8ad07%3A0x1a8624e126396bd!2sMontana%20Vinos%20%26%20Parrilla!5e1!3m2!1ses-419!2sco!4v1763522093255!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>",
+  
+  "servesCuisine": ["Parrilla", "Carnes Premium", "Vinos"],
+  "priceRange": "60.000 COP - 100.000 COP", 
   "acceptsReservations": "True",
+
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "11:00",
+      "opens": "10:00",
       "closes": "19:00"
     }
+  ],
+  
+  /* 🚨 CRUCIAL PARA IA Y ESTRELLAS EN GOOGLE */
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",  
+    "reviewCount": "125"  
+  },
+  
+  /* 🚨 VINCULACIÓN DE REDES SOCIALES (SameAs) */
+  "sameAs": [
+    "https://www.facebook.com/share/1Bo3wk4u7S/?mibextid=wwXIfr",
+    "https://www.instagram.com/montanavinosyparrilla/",
+    "https://www.tiktok.com/@montana.vinos.parrilla"
   ]
 }
 </script>
