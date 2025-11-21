@@ -173,10 +173,11 @@ a {
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/FotoBar.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/FotoBar.png');
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
+    min-height: 60vh;
 }
 
 .hero-content h1 {
@@ -1001,5 +1002,85 @@ b {
     /* Si el texto de la historia en el móvil se ve demasiado grande, podemos ajustarlo */
     #historia p {
         font-size: 1rem;
+    }
+}
+
+/* ==================================== */
+/* 4.5. SECCIÓN EVENTOS ESPECIALES */
+/* ==================================== */
+
+.eventos-container {
+    padding: 4rem 0;
+}
+
+.intro-eventos {
+    font-size: 1.1rem;
+    color: var(--color-texto-claro);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.eventos-grid {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.eventos-details {
+    flex: 1;
+    /* 🚨 LA REGLA CLAVE PARA ESCRITORIO */
+    text-align: left; 
+}
+
+.eventos-details h3 {
+    color: var(--color-oro);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.eventos-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.eventos-details ul li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-texto-claro);
+}
+
+.eventos-imagen {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.eventos-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVE: MÓVIL Y TABLET */
+@media (max-width: 900px) {
+    .eventos-grid {
+        flex-direction: column-reverse; /* Pone la imagen arriba y el texto debajo en móvil */
+        gap: 2rem;
+    }
+    
+    .eventos-imagen {
+        max-width: 100%;
+    }
+    
+    .eventos-details {
+        text-align: left; /* Aseguramos que la alineación a la izquierda prevalezca */
+    }
+    
+    .eventos-details ul {
+        text-align: left; /* Mantiene la lista legible */
+        padding-left: 1rem;
     }
 }
